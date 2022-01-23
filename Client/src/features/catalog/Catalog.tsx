@@ -6,14 +6,16 @@ interface Props {
 }
 
 export default function Catalog({ products, addProduct }: Props) {
-  <>
-    <ul>
-      {products.map((product) => (
-        <li key={product.id}>
-          {product.name} - {product.price}
-        </li>
-      ))}
-    </ul>
-    <button onClick={addProduct}>Add product</button>
-  </>;
+  return (
+    <>
+      <ul>
+        {products.map((product) => (
+          <li key={product.id}>
+            {product.name} - {product.price}
+          </li>
+        ))}
+      </ul>
+      <button onClick={addProduct}>Add product</button>
+    </>
+  );
 }
