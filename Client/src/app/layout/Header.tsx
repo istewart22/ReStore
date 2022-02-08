@@ -1,11 +1,14 @@
 import {
   AppBar,
+  Badge,
+  IconButton,
   List,
   ListItem,
   Switch,
   Toolbar,
   Typography,
 } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { NavLink } from 'react-router-dom';
 
 interface Props {
@@ -42,6 +45,11 @@ export default function Header({ darkMode, handleThemeChange }: Props) {
             </ListItem>
           ))}
         </List>
+        <IconButton size="large" sx={{ color: 'inherit' }}>
+          <Badge badgeContent={0} color="secondary">
+            <ShoppingCartIcon />
+          </Badge>
+        </IconButton>
         <List sx={{ display: 'flex' }}>
           {rightLinks.map(({ title, path }) => (
             <ListItem
