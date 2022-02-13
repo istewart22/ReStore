@@ -12,7 +12,6 @@ import {
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Product } from '../../app/models/product';
-import { grid } from '@mui/system';
 
 export default function ProductDetails() {
   const { id } = useParams<{ id: string }>();
