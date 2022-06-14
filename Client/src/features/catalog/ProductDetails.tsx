@@ -21,8 +21,8 @@ export default function ProductDetails() {
 
   useEffect(() => {
     agent.Catalog.details(parseInt(id))
-      .then(response => setProduct(response))
-      .catch(error => console.log(error))
+      .then((response) => setProduct(response))
+      .catch((error) => console.log(error))
       .finally(() => setLoading(false));
   }, [id]);
 
