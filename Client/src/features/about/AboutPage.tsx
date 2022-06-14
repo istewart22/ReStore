@@ -2,6 +2,7 @@ import { Button, ButtonGroup, Container, Typography } from '@mui/material';
 import agent from '../../app/api/agent';
 
 export default function AboutPage() {
+  return (
   <Container>
     <Typography gutterBottom variant="h2">
       Errors for testing purposes
@@ -50,6 +51,6 @@ export default function AboutPage() {
         Test validation error
       </Button>
     </ButtonGroup>
-  </Container>;
-  return <Typography variant="h2">About Page</Typography>;
+  </Container>
+  )
 }
