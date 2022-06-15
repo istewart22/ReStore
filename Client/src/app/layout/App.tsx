@@ -14,6 +14,7 @@ import ContactPage from '../../features/contact/ContactPage';
 import HomePage from '../../features/home/HomePage';
 import Header from './Header';
 import 'react-toastify/dist/ReactToastify.css';
+import ServerError from '../errors/ServerError';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -33,7 +34,7 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <ToastContainer position='bottom-right' theme='colored' />
+      <ToastContainer position="bottom-right" theme="colored" />
       <CssBaseline />
       <Header darkMode={darkMode} handleThemeChange={handleThemeChange} />
       <Container>
@@ -42,6 +43,7 @@ function App() {
         <Route exact path="/catalog/:id" component={ProductDetails} />
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/contact" component={ContactPage} />
+        <Route exact path="/server-error" component={ServerError} />
       </Container>
     </ThemeProvider>
   );
